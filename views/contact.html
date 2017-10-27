@@ -1,0 +1,64 @@
+<div class="container">
+<div class="maps" map-lazy-load="https://maps.google.com/maps/api/js?key=AIzaSyAV3b_jcuKY4fcpv5N_od01O8UfuUrW--0">
+  <ng-map center="50.851103, 5.058347" zoom="13">
+      <marker position="50.851103, 5.058347"></marker>
+  </ng-map>
+</div>
+</div>
+<!-- https://github.com/allenhwkim/angularjs-google-maps -->
+<div class="container container-contact" ng-controller="contactController as contactCtrl">
+<div class="inner contact">
+                <!-- Form Area -->
+                <div class="contact-form">
+                    <!-- Form -->
+                    <form id="contact-us">
+                        <!-- Left Inputs -->
+                        <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+                            <!-- Name -->
+                            <input type="text" name="name" id="name" required="required" class="form" ng-model="contactCtrl.name" placeholder="Naam" />
+                            <!-- Email -->
+                            <input type="email" name="mail" id="mail" required="required" class="form" ng-model="contactCtrl.email" placeholder="Email" />
+                            <!-- Subject -->
+                            <input type="text" name="subject" id="subject" required="required" class="form" ng-model="contactCtrl.subject" placeholder="Onderwerp" />
+                        </div><!-- End Left Inputs -->
+                        <!-- Right Inputs -->
+                        <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+                            <!-- Message -->
+                            <textarea name="message" id="message" class="form textarea"  ng-model="contactCtrl.content" placeholder="Bericht"></textarea>
+                        </div><!-- End Right Inputs -->
+
+                        <!--<div class="text-center">
+                            <div class="g-recaptcha" data-sitekey="6Le8bTUUAAAAAJK2Zf9PAcxzNN7pU79naGybKNA8" data-callback="enableBtn"></div>
+                        </div>-->
+
+                        <!-- Bottom Submit -->
+                        <div class="relative fullwidth col-xs-12">
+                            <!-- Send Button -->
+                            <button type="submit" id="submit" name="submit" class="form-btn semibold send" ng-click="contactCtrl.mail()">Verzend</button>
+                        </div><!-- End Bottom Submit -->
+                        <!-- Clear -->
+                        <div class="clear"></div>
+
+                      </br>
+                      </br>
+
+                    </form>
+
+                    <!-- Your Mail Message -->
+                    <div class="mail-message-area">
+                        <!-- Message -->
+                        <div class="alert gray-bg mail-message not-visible-message">
+                            <strong>Thank You !</strong> Your email has been delivered.
+                        </div>
+                    </div>
+
+                </div><!-- End Contact Form Area -->
+            </div><!-- End Inner -->
+</div>
+<!--<script>
+  document.getElementById("submit").disabled = true;
+
+  function enableBtn(){
+   document.getElementById("submit").disabled = false;
+  }
+</script>-->
